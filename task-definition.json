@@ -1,0 +1,24 @@
+{
+  "family": "store-demo-containers",
+  "containerDefinitions": [
+    {
+      "name": "store-demo",
+      "image": "079577709174.dkr.ecr.us-east-1.amazonaws.com/paypal:latest",
+      "cpu": 10,
+      "memory": 300,
+      "portMappings": [
+          {
+              "containerPort": 3000,
+              "hostPort": 3000
+          }
+      ],
+      "essential": true,
+      "environment": [
+          {
+              "name": "NODE_ENV",
+              "value": "production"
+          }
+      ]
+    }
+  ]
+}
